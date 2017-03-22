@@ -25,6 +25,10 @@ import { HeroService } from './hero.service';
                 component: DashboardComponent
             },
             {
+                path: 'detail/:id',
+                component: HeroDetailComponent
+            },
+            {
                 path: 'heroes',
                 component: HeroesComponent
             }
