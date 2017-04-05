@@ -11,6 +11,7 @@ import { HeroService } from './hero.service';
 
 import { AppRoutingModule } from './app-routing.module';
 
+import { MaterialModule } from '@angular/material';
 
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
@@ -21,7 +22,8 @@ import { InMemoryDataService } from './in-memory-data.service';
         HttpModule,
         FormsModule,
         InMemoryWebApiModule.forRoot(InMemoryDataService),
-        AppRoutingModule
+        AppRoutingModule,
+        MaterialModule
     ],
     declarations: [
         AppComponent,
