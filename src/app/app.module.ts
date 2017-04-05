@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard.component';
@@ -10,8 +11,6 @@ import { HeroesComponent } from './heroes.component';
 import { HeroService } from './hero.service';
 
 import { AppRoutingModule } from './app-routing.module';
-
-import { MaterialModule } from '@angular/material';
 
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
@@ -23,7 +22,7 @@ import { InMemoryDataService } from './in-memory-data.service';
         FormsModule,
         InMemoryWebApiModule.forRoot(InMemoryDataService),
         AppRoutingModule,
-        MaterialModule
+        MaterialModule.forRoot()
     ],
     declarations: [
         AppComponent,
