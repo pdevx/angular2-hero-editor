@@ -1,11 +1,16 @@
-<div *ngIf="hero">
+<div *ngIf="hero" fxLayout="column" fxLayoutGap="10px">
     <h2>{{hero.name}} details!</h2>
     <div>
-        <label>id: </label>{{hero.id}}</div>
+        <md-input-container>
+            <input mdInput placeholder="Id" disabled [value]="hero.id">
+        </md-input-container>
     <div>
-        <label>name: </label>
-        <input [(ngModel)]="hero.name" placeholder="name" />
+        <md-input-container>
+            <input mdInput [(ngModel)]="hero.name" placeholder="Name" />
+        </md-input-container>
     </div>
-    <button (click)="goBack()">Back</button>
-    <button (click)="save()">Save</button>
+    <div fxLayout="row" fxLayoutGap="10px">
+        <button md-button (click)="goBack()">Back</button>
+        <button md-raised-button color="primary" (click)="save()">Save</button>
+    </div>
 </div>

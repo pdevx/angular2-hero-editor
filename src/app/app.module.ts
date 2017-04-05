@@ -15,6 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
+
 @NgModule({
     imports: [
         BrowserModule,
@@ -22,7 +24,8 @@ import { InMemoryDataService } from './in-memory-data.service';
         FormsModule,
         InMemoryWebApiModule.forRoot(InMemoryDataService),
         AppRoutingModule,
-        MaterialModule.forRoot()
+        MaterialModule.forRoot(),
+        FlexLayoutModule
     ],
     declarations: [
         AppComponent,
