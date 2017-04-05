@@ -4,7 +4,7 @@ body {
   font-family: Roboto;
 }
 /* Master Styles */
-h1 {
+/*h1 {
   color: #369;
   font-size: 250%;
 }
@@ -37,10 +37,10 @@ button:disabled {
   background-color: #eee;
   color: #aaa;
   cursor: auto;
-}
+}*/
 
 /* Navigation link styles */
-nav a {
+/*nav a {
   padding: 5px 10px;
   text-decoration: none;
   margin-right: 10px;
@@ -58,10 +58,10 @@ nav a:hover {
 }
 nav a.active {
   color: #039be5;
-}
+}*/
 
 /* items class */
-.items {
+/*.items {
   margin: 0 0 2em 0;
   list-style-type: none;
   padding: 0;
@@ -106,4 +106,4 @@ nav a.active {
   height: 1.8em;
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
-}
+}*/
