@@ -1,20 +1,25 @@
 <h2>My Heroes</h2>
-<div>
-    <label>Hero name:</label> <input #heroName />
-    <button (click)="add(heroName.value); heroName.value=''">
-    Add
-  </button>
+<div fxLayout="row" fxLayoutGap="10px">
+    <md-input-container>
+        <input mdInput #heroName placeholder="Hero name"/>
+    </md-input-container>
+    <div>
+        <button md-raised-button color="primary" (click)="add(heroName.value); heroName.value=''">Add</button>
+    </div>
 </div>
-<ul class="heroes">
-    <li *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)">
-        <span class="badge">{{hero.id}}</span>
-        <span>{{hero.name}}</span>
-        <button class="delete" (click)="delete(hero); $event.stopPropagation()">x</button>
-    </li>
-</ul>
+<div>
+    <md-card class="heroes-card" fxLayout="row" *ngFor="let hero of heroes" [class.selected]="hero === selectedHero" (click)="onSelect(hero)" >
+        <md-card-header class="site-no-margin">
+            <md-card-title>{{hero.id}}</md-card-title>
+            <md-card-subtitle>{{hero.name}}</md-card-subtitle>
+        </md-card-header>
+        <div fxFlex></div>
+        <button md-icon-button (click)="delete(hero); $event.stopPropagation()"><md-icon>delete_forever</md-icon></button>
+    </md-card>
+</div>
 <div *ngIf="selectedHero">
     <h2>
         {{selectedHero.name | uppercase}} is my hero
     </h2>
-    <button (click)="gotoDetail()">View Details</button>
+    <button md-raised-button color="primary" (click)="gotoDetail()">View Details</button>
 </div>
