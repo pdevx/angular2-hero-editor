@@ -1,12 +1,15 @@
+@import 'https://fonts.googleapis.com/icon?family=Material+Icons';
+@import 'https://fonts.googleapis.com/icon?family=Roboto';
+body {
+  font-family: Roboto;
+}
 /* Master Styles */
 h1 {
   color: #369;
-  font-family: Arial, Helvetica, sans-serif;
   font-size: 250%;
 }
 h2, h3 {
   color: #444;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
 }
 body {
@@ -14,14 +17,12 @@ body {
 }
 body, input[text], button {
   color: #888;
-  font-family: Cambria, Georgia;
 }
 a {
   cursor: pointer;
   cursor: hand;
 }
 button {
-  font-family: Arial;
   background-color: #eee;
   border: none;
   padding: 5px 10px;
@@ -105,8 +106,4 @@ nav a.active {
   height: 1.8em;
   margin-right: .8em;
   border-radius: 4px 0 0 4px;
-}
-/* everywhere else */
-* {
-  font-family: Arial, Helvetica, sans-serif;
 }
